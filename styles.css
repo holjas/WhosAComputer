@@ -10,7 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--background);
+  background-color: var(--body);
   font-family: var(--fontRegular);
 }
 article,
@@ -95,9 +95,11 @@ button:-moz-focusring,
   src: url(./assets/CONSOLAB.woff);
 }
 :root {
+  --body: #383a59;
   --background: #282a36;
   --currentLine: #44475a;
   --black: #1a1b20;
+  --windowOutline: #21222c;
   --foreground: #f8f8f2;
   --comment: #6272a4;
   --cyan: #8be9fd;
@@ -115,39 +117,43 @@ button:-moz-focusring,
   width: 100%;
   margin: 0 60px;
 }
-section {
-  height: 95vh;
+i {
+  color: var(--foreground);
+  font-size: 1rem;
+  padding-left: 10px;
+}
+.flexDisplay {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+section {
+  height: 95vh;
+}
 .grid-container {
   width: 100%;
+  height: 80vh;
+  background-color: var(--background);
   border: 1px solid var(--foreground);
   border-radius: 3px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 40px 0.3fr 3.1fr 0.3fr;
+  grid-template-columns: 75px 175px 250px 1fr;
+  grid-template-rows: 40px 50px 3.1fr 0.3fr;
   gap: 0px 0px;
   grid-template-areas:
     "fileName fileName fileName fileName"
-    "tabOne tabTwo tabThree tabIcon"
-    "textWindow textWindow textWindow textWindow"
+    "tabOne tabOne tabTwo tabIcon"
+    "lineNumber textWindow textWindow textWindow"
     "footer footer footer footer";
 }
 
 .fileName {
   grid-area: fileName;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: var(--black);
+  background-color: var(--windowOutline);
   color: var(--foreground);
 }
-.fa-circle {
-  padding-left: 10px;
-}
+
 .fa-circle:nth-child(1) {
   color: var(--red);
 }
@@ -163,24 +169,33 @@ section {
 
 .tabOne {
   grid-area: tabOne;
+  background-color: red;
 }
 
 .tabTwo {
   grid-area: tabTwo;
-}
-
-.tabThree {
-  grid-area: tabThree;
+  background-color: orange;
 }
 
 .tabIcon {
   grid-area: tabIcon;
+  justify-content: flex-end;
+  background-color: var(--black);
+  text-align: right;
+  padding-right: 20px;
+  background-color: var(--black);
+}
+.tabIcon i {
+  padding-left: 20px;
 }
 
 .textWindow {
   grid-area: textWindow;
 }
-
+.lineNumber {
+  grid-area: lineNumber;
+  background-color: palegreen;
+}
 .footer {
   grid-area: footer;
 }
