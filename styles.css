@@ -140,7 +140,7 @@ section {
   border-radius: 3px;
   display: grid;
   grid-template-columns: 60px 190px 250px 1fr;
-  grid-template-rows: 40px 50px 4fr 30px;
+  grid-template-rows: 40px 50px 1fr 30px;
   gap: 0px 0px;
   grid-template-areas:
     "fileName fileName fileName fileName"
@@ -213,6 +213,12 @@ section {
   grid-area: textWindow;
   padding: 20px 15px;
 }
+.textLine {
+  display: block;
+}
+.textIndent {
+  padding-left: 40px;
+}
 .lineNumber {
   padding: 20px;
   text-align: right;
@@ -232,7 +238,6 @@ section {
   padding-right: 9px;
   color: var(--foreground);
 }
-
 .typed-cursor {
-  color: var(--blueDark);
+  color: var(--black);
 }
