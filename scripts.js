@@ -27,7 +27,7 @@ myApp.startTyping = () => {
   const typedFour = new Typed(".textFour", {
     strings: ["} ^400 else ^100 {"],
     startDelay: 22000,
-    typeSpeed: 90,
+    typeSpeed: 100,
     showCursor: false,
   });
   const typedFive = new Typed(".textFive", {
