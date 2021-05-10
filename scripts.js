@@ -5,7 +5,7 @@ myApp.startTyping = () => {
     strings: [
       "console.log('hello world') ^1000",
       "functino ^200",
-      "function ^500 myFunction^200() ^100{",
+      "function ^500 whosHungry^200() ^100{",
     ],
     startDelay: 50,
     backSpeed: 20,
@@ -13,28 +13,35 @@ myApp.startTyping = () => {
     showCursor: false,
   });
   const typedTwo = new Typed(".textTwo", {
-    strings: ["if(feeling === 'ggood ^300", "if(feeling === 'good'^200) ^200{"],
-    startDelay: 12900,
+    strings: ["if(tummy === 'emmppy ^300", "if(tummy === 'empty'^200) ^200{"],
+    startDelay: 12700,
     typeSpeed: 90,
     showCursor: false,
   });
   const typedThree = new Typed(".textThree", {
-    strings: ["return ^100kill^300ingIt^300() ^300"],
-    startDelay: 19500,
+    strings: ["return ^100eat^300Pizza^300() ^300"],
+    startDelay: 19300,
     typeSpeed: 90,
     showCursor: false,
   });
   const typedFour = new Typed(".textFour", {
     strings: ["} ^400 else ^100 {"],
-    startDelay: 22000,
+    startDelay: 22400,
     typeSpeed: 100,
     showCursor: false,
   });
   const typedFive = new Typed(".textFive", {
-    strings: ["timeForTea() }"],
-    startDelay: 24000,
+    strings: ["drinkWater() ^300 }"],
+    startDelay: 25100,
     typeSpeed: 90,
     showCursor: false,
+  });
+
+  const typedSix = new Typed(".textSix", {
+    strings: ["whosHungry();"],
+    startDelay: 28000,
+    typeSpeed: 90,
+    showCursor: true,
   });
 };
 
